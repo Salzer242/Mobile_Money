@@ -385,6 +385,24 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>org.jvnet.maven2</groupId>
+                    <artifactId>maven.jaxb2-plugin</artifactId>
+                    <version>0.12.2</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <generatePackage>com.groupeisi.mobile.MobileApp</generatePackage>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <schemaDirectory>${projet.basedir}/src/main/ressources/</schemaDirectory>
+                    </configuration>
+                </plugin>
+
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${maven-checkstyle-plugin.version}</version>
